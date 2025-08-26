@@ -1,7 +1,7 @@
-<H3>ENTER YOUR NAME</H3>
-<H3>ENTER YOUR REGISTER NO.</H3>
-<H3>EX. NO.1</H3>
-<H3>DATE</H3>
+## NAME: SAJITH AHAMED.F
+## REGISTER NO.: 212223240144
+## EX. NO.1
+## DATE: 19/08/25
 <H1 ALIGN =CENTER> Introduction to Kaggle and Data preprocessing</H1>
 
 ## AIM:
@@ -37,11 +37,41 @@ STEP 5:Normalizing the data<BR>
 STEP 6:Splitting the data into test and train<BR>
 
 ##  PROGRAM:
-TYPE YOUR CODE HERE
+```python
+import pandas as pd
+import io
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
+from sklearn.model_selection import train_test_split
+df=pd.read_csv("Churn_Modelling.csv")
+print(df)
+X=df.iloc[:,:-1].values
+print(X)
+y=df.iloc[:,-1].values
+print(y)
+print(df.isnull().sum())
+print(df.duplicated())
+print(df['Age'].describe)
+df=df.drop(['Surname','Geography','Gender'],axis=1)
+df.head()
+```
 
 
 ## OUTPUT:
-SHOW YOUR OUTPUT HERE
+<img width="580" height="649" alt="image" src="https://github.com/user-attachments/assets/9de2176c-7efb-47c0-b76d-92d5562bb5f0" />
+
+<img width="504" height="157" alt="image" src="https://github.com/user-attachments/assets/327de2a2-5901-4eaa-9a6d-fc0e8bc3c138" />
+
+
+
+
+
+
+
+<img width="192" height="32" alt="image" src="https://github.com/user-attachments/assets/7d31762c-1157-4cb0-bf98-6bb46ccc5599" />
+
+
+<img width="479" height="271" alt="image" src="https://github.com/user-attachments/assets/86548720-de4e-4f13-b3f9-127e2378c3e9" />
+
 
 
 ## RESULT:
